@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesa de ayuda - Alcaldía de Tebas</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="franja"></div>
+
+  <div class="app">
+
+    <!-- Panel izquierdo: lista de chats -->
+    <aside class="lateral">
+      <div class="lateral-top">
+        <div class="avatar avatar-usuario">&#128100;</div>
+        <div class="iconos">&#9679; &#9993; &#8942;</div>
+      </div>
+
+      <div class="buscador">
+        <input type="text" placeholder="Buscar un chat o iniciar uno nuevo" disabled>
+      </div>
+
+      <div class="lista-chats">
+        <div class="chat-item activo">
+          <div class="avatar">T</div>
+          <div class="chat-item-info">
+            <strong>Mesa de ayuda Alcaldía de Tebas</strong>
+            <p>Hola, bienvenido a la Mesa de ayuda</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Panel derecho: conversación -->
+    <main class="conversacion">
+      <header class="encabezado">
+        <div class="avatar">T</div>
+        <div>
+          <h1>Mesa de ayuda Alcaldía de Tebas</h1>
+          <p id="estado">en línea</p>
+        </div>
+        <button id="btnReiniciar" class="btn-reiniciar" title="Reiniciar conversación">&#8635; Reiniciar</button>
+      </header>
+
+      <section id="chat" class="chat" aria-live="polite"></section>
+
+      <p id="error" class="error" role="alert"></p>
+
+      <footer class="pie">
+        <span class="emoji">&#9786;</span>
+        <label for="mensaje" class="oculto">Escribe tu mensaje</label>
+        <input type="text" id="mensaje" placeholder="Escribe un mensaje" autocomplete="off">
+        <button id="btnEnviar" class="btn-enviar" title="Enviar">&#10148;</button>
+      </footer>
+    </main>
+
+  </div>
+
+  <script src="chat.js"></script>
+</body>
+</html>
